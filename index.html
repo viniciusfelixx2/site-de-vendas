@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PipoThaa — Pipocas Gourmet</title>
+<meta name="description" content="Pipocas gourmet artesanais para o seu dia a dia e para festas. Peça pelo WhatsApp e receba com carinho.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.jpeg" alt="Pipothaa">
+        <span class="logo-texto">PipoThaa</span>
+    </div>
+
+    <nav id="navPrincipal">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header-acoes">
+        <button class="cart-btn" onclick="abrirCarrinho()">
+            🛒 <span id="quantidade">0</span>
+        </button>
+
+        <button class="menu-toggle" onclick="alternarMenu()" aria-label="Abrir menu">
+            ☰
+        </button>
+    </div>
+</header>
+
+
+<section class="hero" id="inicio">
+
+    <div class="hero-text">
+
+        <p class="boas-vindas">Bem-vinda à Pipothaa</p>
+
+        <h1>
+            Pipocas gourmet que
+            <em>transformam momentos</em>
+            em experiências.
+        </h1>
+
+        <p class="hero-sub">
+            Sabores exclusivos, preparados um a um com carinho,
+            para deixar seu dia — ou o seu evento — ainda mais especial.
+        </p>
+
+        <div class="hero-botoes">
+            <button class="btn-primario" onclick="document.getElementById('cardapio').scrollIntoView()">
+                Ver cardápio
+            </button>
+
+            <a class="btn-secundario" href="#eventos">
+                Pipoca para eventos
+            </a>
+        </div>
+
+        <div class="hero-selo">
+            <strong>+500</strong>
+            <span>pedidos entregues com carinho</span>
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+        <img src="imagens/personagem.png" alt="Personagem Pipothaa segurando um saquinho de pipoca">
+    </div>
+
+</section>
+
+
+
+<section id="sobre" class="sobre">
+
+    <div class="sobre-texto">
+        <h2>Feita à mão, sabor de casa</h2>
+        <p>
+            A Pipothaa nasceu da vontade de transformar a pipoca de sempre
+            em uma pequena experiência gourmet. Cada saquinho é preparado
+            no dia do pedido, com ingredientes selecionados e coberturas
+            feitas na hora — sem pressa, do jeito que um bom doce merece.
+        </p>
+    </div>
+
+    <div class="sobre-cards">
+
+        <div class="sobre-card">
+            <span class="sobre-icone">🌽</span>
+            <h3>Feita na hora</h3>
+            <p>Sem estoque parado — sua pipoca é estourada no dia do pedido.</p>
+        </div>
+
+        <div class="sobre-card">
+            <span class="sobre-icone">🎀</span>
+            <h3>Embalagem cuidada</h3>
+            <p>Cada saquinho sai pronto para presentear, sem esforço extra.</p>
+        </div>
+
+        <div class="sobre-card">
+            <span class="sobre-icone">💬</span>
+            <h3>Pedido pelo WhatsApp</h3>
+            <p>Monta seu pedido aqui e finaliza a conversa com a gente.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section id="cardapio">
+
+<h2>Nosso Cardápio</h2>
+<p class="secao-sub">Sabores clássicos, feitos gourmet.</p>
+
+<div class="produtos">
+
+<div class="produto">
+    <span class="selo">Mais pedida</span>
+    <div class="produto-imagem">
+        <img src="imagens/pipoca-ninho.svg" alt="Ilustração da Pipoca Gourmet Ninho">
+    </div>
+    <h3>Pipoca Gourmet Ninho 100g</h3>
+    <p>Crocante, cremosa e com sabor irresistível.</p>
+    <strong>R$ 12,00</strong>
+    <button onclick="adicionarProduto('Pipoca Gourmet Ninho', 12)">Adicionar</button>
+</div>
+
+<div class="produto">
+    <span class="selo">Mais pedida</span>
+    <div class="produto-imagem">
+        <img src="imagens/pipoca-ninho.svg" alt="Ilustração da Pipoca Gourmet Ninho">
+    </div>
+    <h3>Pipoca Gourmet Ninho 250g</h3>
+    <p>Crocante, cremosa e com sabor irresistível.</p>
+    <strong>R$ 28,00</strong>
+    <button onclick="adicionarProduto('Pipoca Gourmet Ninho', 28)">Adicionar</button>
+</div>
+
+<div class="produto">
+    <div class="produto-imagem">
+        <img src="imagens/pipoca-chocolate.svg" alt="Ilustração da Pipoca Chocolate">
+    </div>
+    <h3>Pipoca Chocolate 100g</h3>
+    <p>Chocolate especial com acabamento gourmet.</p>
+    <strong>R$ 12,00</strong>
+    <button onclick="adicionarProduto('Pipoca Chocolate', 12)">Adicionar</button>
+</div>
+
+<div class="produto">
+    <div class="produto-imagem">
+        <img src="imagens/pipoca-chocolate.svg" alt="Ilustração da Pipoca Chocolate">
+    </div>
+    <h3>Pipoca Chocolate 250g</h3>
+    <p>Chocolate especial com acabamento gourmet.</p>
+    <strong>R$ 28,00</strong>
+    <button onclick="adicionarProduto('Pipoca Chocolate', 28)">Adicionar</button>
+</div>
+
+<div class="produto">
+    <div class="produto-imagem">
+        <img src="imagens/pipoca-caramelo.svg" alt="Ilustração da Pipoca Caramelo">
+    </div>
+    <h3>Pipoca Caramelo 100g</h3>
+    <p>Doce na medida certa.</p>
+    <strong>R$ 12,00</strong>
+    <button onclick="adicionarProduto('Pipoca Caramelo', 12)">Adicionar</button>
+</div>
+
+<div class="produto">
+    <div class="produto-imagem">
+        <img src="imagens/pipoca-caramelo.svg" alt="Ilustração da Pipoca Caramelo">
+    </div>
+    <h3>Pipoca Caramelo 250g</h3>
+    <p>Doce na medida certa.</p>
+    <strong>R$ 28,00</strong>
+    <button onclick="adicionarProduto('Pipoca Caramelo', 28)">Adicionar</button>
+</div>
+
+<div class="produto">
+    <div class="produto-imagem">
+        <img src="imagens/pacoca.png" alt="Ilustração da Pipoca Caramelo">
+    </div>
+    <h3>Pipoca de Paçoca 100g</h3>
+    <p>Aquele sabor maravilhoso de paçoca.</p>
+    <strong>R$ 12,00</strong>
+    <button onclick="adicionarProduto('Pipoca Caramelo', 12)">Adicionar</button>
+</div>
+
+<div class="produto">
+    <div class="produto-imagem">
+        <img src="imagens/pacoca.png" alt="Ilustração da Pipoca Caramelo">
+    </div>
+    <h3>Pipoca de Paçoca 250g</h3>
+    <p>Aquele sabor maravilhoso de paçoca.</p>
+    <strong>R$ 28,00</strong>
+    <button onclick="adicionarProduto('Pipoca Caramelo', 28)">Adicionar</button>
+</div>
+
+<div class="produto">
+    <div class="produto-imagem">
+        <img src="imagens/nutella.png" alt="Ilustração da Pipoca Caramelo">
+    </div>
+    <h3>Balde de Nutella 500g</h3>
+    <p>O maravilhoso e persistente sabor.</p>
+    <strong>R$ 25,00</strong>
+    <button onclick="adicionarProduto('Pipoca Caramelo', 25)">Adicionar</button>
+</div>
+
+<div class="produto">
+    <div class="produto-imagem">
+        <img src="imagens/ninho.png" alt="Ilustração da Pipoca Caramelo">
+    </div>
+    <h3>Balde de Ninho 500g</h3>
+    <p>O sabor chamativo e marcante.</p>
+    <strong>R$ 25,00</strong>
+    <button onclick="adicionarProduto('Pipoca Caramelo', 25)">Adicionar</button>
+</div>
+
+<div class="produto">
+    <div class="produto-imagem">
+        <img src="imagens/kinderbueno.png" alt="Ilustração da Pipoca Caramelo">
+    </div>
+    <h3>Balde de Kinder Bueno 500g</h3>
+    <p>Aquele sabor maravilhoso que não sai da mente.</p>
+    <strong>R$ 25,00</strong>
+    <button onclick="adicionarProduto('Pipoca Caramelo', 25)">Adicionar</button>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="depoimentos">
+
+    <h2>Quem já provou</h2>
+    <p class="secao-sub">Palavras de quem pediu Pipothaa.</p>
+
+    <div class="depoimentos-lista">
+
+        <div class="depoimento">
+            <p>"Pedi para o aniversário da minha filha e sobrou saquinho vazio só — sumiu rapidinho."</p>
+            <span>— Camila R.</span>
+        </div>
+
+        <div class="depoimento">
+            <p>"A pipoca de ninho é surreal. Já virou parada obrigatória aqui em casa."</p>
+            <span>— Diego M.</span>
+        </div>
+
+        <div class="depoimento">
+            <p>"Contratei o carrinho para um evento da empresa e o atendimento foi impecável do início ao fim."</p>
+            <span>— Renata A.</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section id="eventos">
+
+<h2>Eventos Pipothaa</h2>
+<p class="secao-sub">Leve uma experiência gourmet para sua festa.</p>
+
+<div class="servicos">
+
+<div class="servico-card">
+    <h3>🎉 Carrinho Pipothaa</h3>
+    <p>Atendimento personalizado no seu evento, com produção ao vivo.</p>
+    <strong>R$ 350,00</strong>
+    <button onclick="adicionarProduto('Carrinho Pipothaa Evento', 350)">Adicionar</button>
+</div>
+
+<div class="servico-card">
+    <h3>🎂 Festa Personalizada</h3>
+    <p>Pipocas decoradas de acordo com o tema do seu evento.</p>
+    <strong>R$ 250,00</strong>
+    <button onclick="adicionarProduto('Festa Personalizada', 250)">Adicionar</button>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="cta-final">
+    <h2>Pronta para montar seu pedido?</h2>
+    <p>Escolha os sabores, monte o carrinho e finalize direto pelo WhatsApp.</p>
+    <button class="btn-primario" onclick="document.getElementById('cardapio').scrollIntoView()">
+        Montar meu pedido
+    </button>
+</section>
+
+
+
+<div id="carrinho" class="carrinho">
+
+    <div class="carrinho-topo">
+        <h2>Seu Pedido</h2>
+        <button class="fechar-x" onclick="fecharCarrinho()" aria-label="Fechar carrinho">×</button>
+    </div>
+
+    <div id="listaCarrinho">
+        Seu carrinho está vazio.
+    </div>
+
+    <h3 class="carrinho-total">
+        Total: <span>R$ <span id="total">0</span></span>
+    </h3>
+
+    <input id="nome" placeholder="Seu nome">
+    <input id="data" placeholder="Data do evento (opcional)">
+    <textarea id="observacao" placeholder="Observações"></textarea>
+
+    <button class="btn-whatsapp" onclick="finalizarWhatsApp()">
+        Finalizar pedido no WhatsApp
+    </button>
+
+</div>
+
+<div id="overlayCarrinho" class="overlay" onclick="fecharCarrinho()"></div>
+
+
+
+<footer id="contato">
+
+    <div class="footer-marca">
+        <img src="logo.jpeg" alt="Pipothaa">
+        <h3>Pipothaa</h3>
+        <p>Pipocas gourmet feitas para momentos especiais.</p>
+    </div>
+
+    <div class="footer-info">
+        <h4>Contato</h4>
+        <p>📍 Atendimento sob encomenda</p>
+        <p>📱 WhatsApp: (11) 96390-3051</p>
+        <p>🕐 Seg a Sáb · 9h às 19h</p>
+    </div>
+
+    <div class="footer-info">
+        <h4>Redes sociais</h4>
+        <p>Instagram: @pipothaa</p>
+    </div>
+
+    <div class="footer-copy">
+        © 2026 Pipothaa. Todos os direitos reservados.
+    </div>
+
+</footer>
+
+
+<a class="whatsapp-flutuante" href="#" onclick="abrirCarrinho(); return false;" aria-label="Fazer pedido pelo WhatsApp">
+    💬
+</a>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
