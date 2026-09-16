@@ -138,7 +138,7 @@ Obrigado! 🍿`;
     // ALTERE AQUI O NÚMERO DO WHATSAPP (com DDI + DDD, só números)
     let telefone = "5511963903051";
 
-    let url = "https://wa.me/5511963903051" + telefone + "?text=" + encodeURIComponent(mensagem);
+    let url = "https://wa.me/5511963903051" + "?text=" + encodeURIComponent(mensagem);
 
     window.open(url, "_blank");
 
